@@ -6,7 +6,7 @@
 
 
     <style>
-        body{
+       body{
             width:75%;
             margin: auto;
             padding-top:50px;
@@ -61,7 +61,7 @@
     <!--     ========================================================================         -->
     <h1 class="header"> Student's Comments form!</h1>
     <div>
-        <form action="post">
+        <form action="/thanks" method="post">
 
             <label for="lname">Course Code:</label><br>
             <input type="text"  class="u-input" placeholder="COMP-308"><br>
@@ -73,7 +73,7 @@
         
             <label for="subject">Your Comments:</label><br>
                
-            <textarea id="subject" name="subject" placeholder="Write your comments here" style="height:200px; resize: none" class="u-input" ></textarea>
+            <textarea id="subject"  placeholder="Write your comments here" style="height:200px; resize: none" class="u-input" name ="comment" ></textarea>
           
             <input type="submit" value="Submit">
             

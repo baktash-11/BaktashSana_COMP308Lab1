@@ -1,11 +1,13 @@
 exports.displayInfo = function (req, res) {
 
     //get user input using request object
-    var username = req.body.username;
+    let username = req.body.username;
     //B added
-    var password = req.body.password;
+    let password = req.body.password;
     //make a reference to the session object
-    var session = req.session;
+
+    
+    let session = req.session;
    
     //store the username in session object
     session.username = username;
@@ -15,7 +17,29 @@ exports.displayInfo = function (req, res) {
     //show the display.ejs page and pass username to it
     res.render('display', {
         username: username,
-        password:password
+        password: password,
+        
+    });   
+
+}; //end of function
+exports.thanks = function (req, res) {
+
+    //get user input using request object
+    let username = req.body.username;
+   
+    let comment = req.body.comment;
+    //make a reference to the session object
+    let session = req.session;
+    //store the username in session object
+    session.username = username;
+    //B added
+    session.comment = comment;
+    
+    //show the display.ejs page and pass username to it
+    res.render('thanks', {
+        username: username,
+        comment: comment
+        
     });   
 
 }; //end of function

@@ -17,4 +17,10 @@ module.exports = function (app) {
         
     });
 
+    app.post('/thanks', function (req, res) {
+        //use the controller function
+        index.thanks(req, res);
+        
+    });
+
 };
