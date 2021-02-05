@@ -4,15 +4,61 @@
 <head>
     <meta charset="utf-8" />
     <title> <%= loginMessage %> </title>
+
+    <style>
+        .header{
+            color:#45a049;
+            margin: auto; 
+            text-align:center;
+            padding: 40px;
+        }
+        .u-input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+
+        input[type=submit ] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: #45a049;
+        }
+
+        div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <form method="post">
 
-        <input type="text" size="30" placeholder="Enter your user name" name="username"><br />
-        <input type="password" size="30" placeholder="Enter your password" name="password"><br />
-        <input type="submit" value="Submit" name="submit">
+<!-- ===================================================================================-->
 
-    </form>
+    <div> 
+        <h1 class="header"> <%= loginMessage %></h1>
+        <form method="post">
+
+            <input type="text" size="30" placeholder="Enter your user name" name="username" class="u-input"><br />
+            <input type="password" size="30" placeholder="Enter your password" name="password" class="u-input"><br />
+            <input type="submit" value="Submit" name="submit">
+
+        </form>
+    </div>
+
 </body>
 </html>
