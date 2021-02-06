@@ -15,7 +15,7 @@ exports.displayInfo = function (req, res) {
     session.password = password;
     console.log("username in session: " + session.username +" "+ session.password);
     //show the display.ejs page and pass username to it
-    res.render('display', {
+    res.render('forms', {
         username: username,
         password: password,
         
