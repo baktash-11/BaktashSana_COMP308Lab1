@@ -3,21 +3,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title> <%= loginMessage %> </title>
+    <title> COMP-308 Assignment 1 </title>
     <link href="app.css" rel="stylesheet" type="text/css">
    
 </head>
 <body>
 
 
-<!-- ===================================================================================-->
+`
 
     <div> 
         <h1 class="header"> <%= loginMessage %></h1>
         <form method="post">
-
-            <input type="text" size="30" placeholder="Enter your user name" name="username" class="u-input"><br />
-            <input type="password" size="30" placeholder="Enter your password" name="password" class="u-input"><br />
+            <label for="user-id">Your email is your user id:</label>
+            <input type="text" size="30" placeholder="Enter your user name" name="username" class="u-input" id="user-id" required><br />
+            <label for="pass">Password (8 characters minimum):</label>
+            <input type="password" size="30" placeholder="Enter your password" name="password" class="u-input" minlength="8" required id="pass"><br />
             <input type="submit" value="Submit" name="submit">
 
         </form>

@@ -8,23 +8,32 @@
 </head>
 
 <body>  
-    <!--     ========================================================================         -->
-    <h1 class="header"> Student's Comments form!</h1>
+    
+    
     <div>
+        <h1 class="header"> Student's Comments form!</h1>
+
         <form action="/thanks" method="post">
 
-            <label for="lname">Course Code:</label><br>
-            <input type="text"  class="u-input" placeholder="COMP-308"><br>
+            <label for="course">Course Code:</label><br>
+            <input type="text"  class="u-input" placeholder="COMP-308" id="course"><br>
             
-            <label for="lname">Course Name:</label><br>
-            <input type="text" id="lname" name="lastname" placeholder="Emerging Technologies" class="u-input">
-             <label for="lname">Student Email:</label><br>
-            <input type="text"  name="username"  value="<%= username %>" class="u-input">
+            <label for="course-name">Course Name:</label><br>
+            <input type="text" id="course-name" name="lastname" placeholder="Emerging Technologies" class="u-input">
+
+             <label for="userId">Student Email:</label><br>
+            <input type="text"  name="username"  value="<%= username %>" class="u-input" id="userId">
         
             <label for="subject">Your Comments:</label><br>
                
             <textarea id="subject"  placeholder="Write your comments here" style="height:200px; resize: none" class="u-input" name ="comment" ></textarea>
           
+            <label for="section">Section:</label><br>
+            <input type="text"  name="section" placeholder="003" class="u-input">
+
+            <label for="section">Date :</label><br>
+            <input type="date"  name="section" placeholder="003" class="u-input">
+
             <input type="submit" value="Submit">
             
         </form>
